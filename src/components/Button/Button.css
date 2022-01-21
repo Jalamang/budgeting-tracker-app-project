@@ -1,0 +1,36 @@
+.button-control{
+    display: flex;
+    justify-content: space-between;
+    margin: 150px 90px;
+    height: 50px;
+    position: relative;
+    bottom: 60px;
+}
+
+.button-control .back-btn{
+width: 150px;
+margin-left: 95px;
+background-color: rgb(134, 120, 120);
+background-color: rgb(2, 36, 60);
+font-size: 25px;
+color: white;
+}
+.button-control .edit-btn{
+width: 150px;
+background-color: rgb(134, 120, 120);
+background-color: rgb(2, 36, 60);
+font-size: 25px;
+color: white;
+}
+.button-control .delete-btn{
+width: 150px;
+background-color: rgb(134, 120, 120);
+background-color: rgb(2, 36, 60);
+margin-right: 95px;
+font-size: 25px;
+color: white;
+}
+
+.button-control .delete-btn:hover{
+    background-color: red;
+}

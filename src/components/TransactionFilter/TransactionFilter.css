@@ -1,0 +1,24 @@
+.trans-Filter {
+	color: black;
+	padding: 0 1rem;
+}
+
+.trans-heading {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1rem 0;
+}
+
+.trans-Filter label {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.trans-Filter select {
+	font: inherit;
+	padding: 0.5rem 3rem;
+	font-weight: bold;
+	border-radius: 6px;
+}

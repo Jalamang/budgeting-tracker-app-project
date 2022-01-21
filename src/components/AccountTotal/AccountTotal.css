@@ -1,0 +1,23 @@
+.account-total {
+    background-color: rgba(8, 10, 9, 0);
+     position: relative;
+    top: 40px;
+    border: 2px solid black;
+    margin-left: 650px;
+    margin-right: 650px;
+    justify-content: center;
+    height: 45px;
+    align-items: center;
+    padding-top: 2px;
+    border-top: 2px groove #ff0000;
+     font-size: x-large;
+     font-weight: 900;
+     display: flex;
+     justify-content: space-evenly;
+}
+
+
+.acc-text {
+position: relative;
+top: 45px;
+}

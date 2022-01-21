@@ -1,0 +1,7 @@
+.new-page {
+    background-color: rgba(178, 224, 209, 0.676);
+    height: 100vh;
+    margin: 0;
+    padding: 0px;
+    overflow: auto;
+  }

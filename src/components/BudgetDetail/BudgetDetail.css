@@ -1,0 +1,60 @@
+.budgetDetail {
+  display: grid;
+  border: 2px solid black;
+  justify-content: center;
+  background-color: rgba(61, 161, 96, 0.697);
+  width: 75%;
+  margin: 25px auto 50px;
+  border-radius: 25px;
+  box-shadow: 5px 12px 20px black;
+  padding: 30px 0px;
+  height: 45vh;
+  grid-gap: 1px;
+}
+
+.budgetDetail  h2 {
+  background-color: rgb(167, 201, 207);
+  margin: 0;
+ font-family: 'Courier New', Courier, monospace;
+  border-radius: 25px;
+  width: 445px;
+  font-size: 25px;
+  padding-top: 25px;
+  
+}
+
+.budgetDetail h2:hover{
+  background-color: rgba(3, 90, 104, 0.916);
+  color: aliceblue;
+}
+
+.budgetDetail h3 {
+  background-color: rgb(167, 201, 207);
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 25px;
+  width: 445px;
+  font-size: 25px;
+  padding-top: 25px;
+}
+
+.budgetDetail h3:hover{
+  background-color: rgba(3, 90, 104, 0.916);
+  color: aliceblue;
+}
+
+.budgetDetail h4 {
+  background-color: rgb(167, 201, 207);
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 25px;
+  width: 445px;
+  font-size: 25px;
+  padding-top: 25px;
+}
+
+.budgetDetail h4:hover{
+  background-color: rgba(3, 90, 104, 0.916);
+  align-content: left;
+  color: aliceblue;
+}

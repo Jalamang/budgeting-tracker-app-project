@@ -1,0 +1,36 @@
+.budget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    background-color: #021311f0;
+    color: white;
+    font-size: 1.9rem;
+    font-weight: 450;
+  }
+  
+.date-button{
+  width: 155px;
+  text-align: left;
+  margin-left: 12px;
+  height: 35px;
+  border-radius: 12px;
+  font-size: .8rem;
+  font-weight: 650;
+  font-family: sans-serif;
+}
+
+
+.detail-view{
+  width: 155px;
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 35px;
+  border-radius: 10px;
+}
+.detail-view:hover{
+  background-color: rgb(9, 138, 15);
+}

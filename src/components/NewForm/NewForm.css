@@ -1,0 +1,52 @@
+.newForm {
+  background-color: rgb(33, 102, 112);
+  margin-left: 275px;
+  margin-right: 275px;
+  border-radius: 25px;
+  box-shadow: 5px 12px 20px black;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  width: 700px;
+  font-weight: bold;
+  height: 75vh;
+}
+
+form {
+  display: grid;
+  gap: 25px;
+}
+
+.newForm-control input {
+  width: auto;
+  height: 35px;
+  font-size: 25px;
+  font-weight: 900;
+  background-color: rgb(72, 97, 97);
+}
+.newForm-control select {
+  width: auto;
+  height: 35px;
+  font-size: 25px;
+  font-weight: 900;
+  background-color: rgb(72, 97, 97);
+}
+
+form .form-submit{
+  width: 200px;
+  position: relative;
+  top:130px;
+  height: 45px;
+}
+
+
+.form-nevermind{
+  background-color: rgb(72, 97, 97);
+  text-decoration: none;
+  width: 150px;
+  position: relative;
+  top:85px;
+  height: 45px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 450px;
+}
