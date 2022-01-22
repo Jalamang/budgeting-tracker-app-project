@@ -60,6 +60,7 @@ const NewForm = () => {
           id="date"
           value={transactions.date}
           onChange={handleTextChange}
+          autoComplete="off"
           required
         />
 
@@ -69,6 +70,7 @@ const NewForm = () => {
           id="item_name"
           value={transactions.item_name}
           onChange={handleTextChange}
+          autoComplete="off"
           required
         />
 
@@ -78,6 +80,7 @@ const NewForm = () => {
           type="number"
           value={transactions.amount}
           onChange={handleTextChange}
+          autoComplete="off"
           required
         />
         <label htmlFor="from">From :</label>
@@ -86,6 +89,7 @@ const NewForm = () => {
           type="text"
           value={transactions.from}
           onChange={handleTextChange}
+          autoComplete="off"
           required
         />
         <label htmlFor="category">Select a category </label>
@@ -94,11 +98,12 @@ const NewForm = () => {
           value={transactions.category}
           onChange={handleTextChange}
         >
-          <option value="default">Choose a category</option>
-          <option value="Education">Education</option>
-          <option value="Performing-Art">Performing-Art</option>
-          <option value="Health">Health</option>
-          <option value="Telecom">Telecom</option>
+          <option >Choose a category</option>
+          <option value="Income">Income</option>
+          <option value="Savings">Savings</option>
+          <option value="Pets">Pets</option>
+          <option value="Food">Food</option>
+          <option value="Telecoms">Telecoms</option>
         </select>
         <br />
 

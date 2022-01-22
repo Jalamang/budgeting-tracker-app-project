@@ -7,7 +7,7 @@ const Budget = ({ budget, id }) => {
   return (
     <>
     
-      <div className="budget">
+      <div className="budget " >
       
         <button className="date-button">{date}</button>
         <div>{item_name}</div>

@@ -5,25 +5,19 @@ import Budget from "../Budget/Budget";
 import TransactionFilter from "../TransactionFilter/TransactionFilter";
 import "./Budgets.css";
 
-
 const Budgets = () => {
   const [transactions, setTransactions] = useState([]);
   const [filteredYear, setFilteredYear] = useState("All");
   const URL = process.env.REACT_APP_API_URL;
- 
 
   useEffect(() => {
     const fetchData = async () => {
       const transactionsData = await axios.get(URL + "/transactions");
       setTransactions(transactionsData.data);
     };
+
     fetchData();
   }, []);
-
-
-  if(transactions.length === 0) {
-		return <div className="budget-list">Found no transaction!</div>;
-	}
 
   const handleYearChange = (selectedYear) => {
     console.log(selectedYear);
@@ -38,9 +32,15 @@ const Budgets = () => {
             new Date(budget.date).getFullYear().toString() === filteredYear
         );
 
-  const displayTransactions = transactionsRequested.map((budget, index) => (
-    <Budget key={index.toString()} budget={budget} id={index} />
-  ));
+  let displayTransactions = "";
+  console.log(transactionsRequested);
+  if (transactionsRequested.length === 0) {
+    return <div className="budget-error">Found no transaction!</div>;
+  } else {
+    displayTransactions = transactionsRequested.map((budget, index) => (
+      <Budget key={index.toString()} budget={budget} id={index} />
+    ));
+  }
 
   return (
     <>
@@ -48,7 +48,7 @@ const Budgets = () => {
         selected={filteredYear}
         handleYearChange={handleYearChange}
       />
-      <div className="budgets">
+      <div className="budgets" id="style-2">
         <div>
           <div className="heading">
             <div>Date</div>

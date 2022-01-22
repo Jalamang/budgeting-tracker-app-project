@@ -36,7 +36,7 @@ const AccountTotal = () => {
         <style>
           {`
       .account-total{
-       color: ${total >= 0 && total < 1000 ? "white" : "green"}; 
+       color: ${total >= 0 && total <= 1000 ? "white" : "green"}; 
       }
       .account-total{
         border-top: ${total >= 0 && total < 1000 ? "5px groove #ffff" : "5px groove #007500"}; 

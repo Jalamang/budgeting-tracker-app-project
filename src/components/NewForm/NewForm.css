@@ -34,7 +34,7 @@ form {
 form .form-submit{
   width: 200px;
   position: relative;
-  top:130px;
+  top:150px;
   height: 45px;
 }
 
@@ -44,7 +44,7 @@ form .form-submit{
   text-decoration: none;
   width: 150px;
   position: relative;
-  top:85px;
+  top:105px;
   height: 45px;
   font-size: 25px;
   font-weight: 600;
