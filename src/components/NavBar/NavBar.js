@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AccountTotal from "../AccountTotal/AccountTotal";
 
 import "./NavBar.css";
 const NavBar = () => {
@@ -10,7 +11,9 @@ const NavBar = () => {
           <h1>Budget App</h1>
         </Link>
       </div>
-      <button className="newLink">
+       <div><AccountTotal /></div> 
+      
+      <button className="new-transaction">
         <Link to="/transactions/new">New Transaction</Link>
       </button>
     </div>

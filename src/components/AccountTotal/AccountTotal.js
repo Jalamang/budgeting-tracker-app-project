@@ -26,7 +26,7 @@ const AccountTotal = () => {
     <>
       <h1 className="acc-text">Total</h1>
       <div className="account-total">
-        <div>{total.toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}</div>
+        <div> {total.toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}</div>
         <style>
           {`
       .account-total{

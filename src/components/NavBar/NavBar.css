@@ -7,7 +7,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .Nav .navTitle {
+  .navBar .budgetTitle {
     justify-content: center;
     align-content: center;
     font-size: 25px;
@@ -17,11 +17,12 @@
     display: flex;
   }
   
-  .navBar .navTitle h1 {
-    margin: 0;
+  .navBar .budgetTitle h1 {
+    width: max-content;
+    margin-left: 20px;
   }
   
-  .navBar .newLink {
+  .navBar .new-transaction {
     width: 200px;
     height: 50px;
     border: 3px solid white;
@@ -33,9 +34,9 @@
     background-color: rgba(255, 255, 255, 0);
   }
   
-  .navBar .newLink a {
-    height: 100%;
-    width: 100%;
+  .navBar .new-transaction a {
+    height: 100%; 
+     width: 100%;
     box-sizing: border-box;
     align-items: center;
     justify-content: space-evenly;
@@ -43,6 +44,7 @@
     text-align: none;
     font-size: 20px;
     font-weight: bold;
+    
   }
   
   .navBar a,

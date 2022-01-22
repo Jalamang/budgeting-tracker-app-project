@@ -1,23 +1,29 @@
 .account-total {
-    background-color: rgba(8, 10, 9, 0);
-     position: relative;
-    top: 40px;
-    border: 2px solid black;
-    margin-left: 650px;
-    margin-right: 650px;
-    justify-content: center;
-    height: 45px;
-    align-items: center;
-    padding-top: 2px;
-    border-top: 2px groove #ff0000;
-     font-size: x-large;
-     font-weight: 900;
-     display: flex;
-     justify-content: space-evenly;
+  background-color: rgba(8, 10, 9, 0);
+  position: relative;
+  top: 34px;
+  border: 2px solid black;
+  margin-left: 100px;
+  margin-right: 230px;
+  justify-content: center;
+  height: 45px;
+  align-items: center;
+  padding-top: 2px;
+  border-top: 2px groove #ff0000;
+  font-size: x-large;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-
 .acc-text {
-position: relative;
-top: 45px;
+   text-align: left;
+  padding-left: 0;
+  margin: 0;
+  margin-right: 400px;
+  width: 350px;
+  justify-content: end;
+  position: relative;
+  top: 75px;
+  color: antiquewhite;
 }
