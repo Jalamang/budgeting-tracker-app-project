@@ -21,20 +21,33 @@ const AccountTotal = () => {
       Number(previousValue) + Number(currentValue),
     0
   );
- 
+
   return (
     <>
       <h1 className="acc-text">Total</h1>
       <div className="account-total">
-        <div> {total.toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}</div>
+        <div>
+          {" "}
+          {total
+            .toFixed(2)
+            .toString()
+            .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
+        </div>
         <style>
           {`
       .account-total{
        color: ${total >= 0 && total < 1000 ? "white" : "green"}; 
-       width:'250px';
       }
       .account-total{
+        border-top: ${total >= 0 && total < 1000 ? "5px groove #ffff" : "5px groove #007500"}; 
+      }
+
+      .account-total{
         color: ${total < 0 ? "red" : ""}  
+       }
+      .account-total{
+        border-top:  ${total < 0 ? "5px groove #ff0000" : ""}
+          
        }
 `}
         </style>
