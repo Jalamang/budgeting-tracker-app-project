@@ -104,6 +104,7 @@ const NewForm = () => {
           <option value="Pets">Pets</option>
           <option value="Food">Food</option>
           <option value="Telecoms">Telecoms</option>
+          <option value="Bank">Bank</option>
         </select>
         <br />
 
