@@ -13,8 +13,6 @@
 }
 
 .date-button {
-  display: flex;
-  flex-direction: column;
   width: 10.5rem;
   height: 3.5rem;
   border: 1px solid #ececec;

@@ -69,7 +69,8 @@ form .form-submit {
 
   .form-nevermind {
     justify-content: left;
-    position: absolute;
+    position: relative;
+    top: 12px;
   }
 
   div.newForm {
