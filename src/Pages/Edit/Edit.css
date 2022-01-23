@@ -5,3 +5,17 @@
   padding: 0px;
   overflow: auto;
 }
+
+
+      /* Tablets and under */
+      @media (max-width: 768px) {
+  
+        .edit {
+          height: 90vh;
+          width: 74.6vh;
+          justify-content: center;
+          margin-right: 32px; 
+
+        }
+    
+    }

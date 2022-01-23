@@ -31,22 +31,49 @@ form {
   background-color: rgb(72, 97, 97);
 }
 
-form .form-submit{
+form .form-submit {
   width: 200px;
   position: relative;
-  top:150px;
+  top: 150px;
   height: 45px;
 }
 
-
-.form-nevermind{
+.form-nevermind {
   background-color: rgb(72, 97, 97);
   text-decoration: none;
   width: 150px;
   position: relative;
-  top:105px;
+  top: 105px;
   height: 45px;
   font-size: 25px;
   font-weight: 600;
   margin-left: 450px;
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+  .newForm-control {
+    width: 450px;
+    padding-left: 32px;
+    padding-right: 0px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  form .form-submit {
+    width: 200px;
+    position: relative;
+    top: 50px;
+    height: 45px;
+  }
+
+  .form-nevermind {
+    justify-content: left;
+    position: absolute;
+  }
+
+  div.newForm {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
 }

@@ -58,3 +58,16 @@
   align-content: left;
   color: aliceblue;
 }
+
+
+      /* Tablets and under */
+      @media (max-width: 768px) {
+        .budgetDetail {
+
+          height: 600px;
+          width: 600px;
+          padding-left: 2px;
+          padding-right: 2px;
+        }
+    
+    }

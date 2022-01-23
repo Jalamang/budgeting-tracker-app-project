@@ -5,7 +5,7 @@ import AccountTotal from "../AccountTotal/AccountTotal";
 import "./NavBar.css";
 const NavBar = () => {
   return (
-    <div className="navBar">
+    <div className="navbar">
       <div className="budgetTitle">
         <Link to="/transactions">
           <h1>Budget App</h1>

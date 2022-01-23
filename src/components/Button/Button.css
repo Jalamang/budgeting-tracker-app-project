@@ -34,3 +34,18 @@ color: white;
 .button-control .delete-btn:hover{
     background-color: red;
 }
+
+
+
+      /* Tablets and under */
+      @media (max-width: 768px) {
+  
+        .budgetDetail {
+          display: grid;
+          height: 300px;
+          width: 480px;
+          padding-left: 2px;
+          padding-right: 2px;
+        }
+    
+    }

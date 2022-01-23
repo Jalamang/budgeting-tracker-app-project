@@ -1,7 +1,15 @@
 .new-page {
-    background-color: rgba(178, 224, 209, 0.676);
+  background-color: rgba(178, 224, 209, 0.676);
+  height: 100vh;
+  margin: 0;
+  padding: 0px;
+  overflow: auto;
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+  .new-page {
     height: 100vh;
-    margin: 0;
-    padding: 0px;
-    overflow: auto;
+    width: 74.9vh;
   }
+}

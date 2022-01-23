@@ -6,3 +6,14 @@
         padding: 0px;
         overflow: auto;
       }
+
+
+      /* Tablets and under */
+@media (max-width: 768px) {
+  
+    .show-page {
+      height: 100vh;
+      width: 74.6vh;
+    }
+
+}
