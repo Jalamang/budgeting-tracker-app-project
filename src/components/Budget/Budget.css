@@ -1,41 +1,44 @@
 .budget {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    padding: 0.5rem;
-    margin: 1rem 0;
-    border-radius: 12px;
-    background-color: #021311f0;
-    color: white;
-    font-size: 1.9rem;
-    font-weight: 450;
-  }
-  
-.date-button{
-  width: 155px;
-  text-align: left;
-  margin-left: 12px;
-  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
+  margin: 1rem 0;
   border-radius: 12px;
-  font-size: .8rem;
-  font-weight: 650;
-  font-family: sans-serif;
+  background-color: #021311f0;
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 450;
 }
 
+.date-button {
+  display: flex;
+  flex-direction: column;
+  width: 10.5rem;
+  height: 3.5rem;
+  border: 1px solid #ececec;
+  background-color: #2a2a2a;
+  color: white;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
 
-.detail-view{
+.detail-view {
   width: 155px;
   margin-left: 12px;
   margin-right: 12px;
-  height: 35px;
+  height: 3.6rem;
   border-radius: 10px;
 }
-.detail-view:hover{
+.detail-view:hover {
   background-color: rgb(9, 138, 15);
 }
-
-
+.date-button:hover {
+  transform: scale(1.2);
+}
 
 @media (max-width: 768px) {
   .budget {
@@ -43,4 +46,5 @@
     width: 70vh;
     padding-left: 2px;
     padding-right: 2px;
-  }}
+  }
+}
