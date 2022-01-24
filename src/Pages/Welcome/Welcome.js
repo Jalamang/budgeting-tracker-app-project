@@ -1,4 +1,6 @@
 import React from "react";
+import ReactChart from "../../components/Chart/ReactChart";
+
 import "./Welcome.css"
 const Welcome = () => {
   return (
@@ -8,7 +10,10 @@ const Welcome = () => {
       <h4>
         'Stop living paycheck-to-paycheck, get out of debt, and save more money™'
       </h4>
-      
+      <br/>
+      <br/>
+      <br/>
+      <ReactChart />
     </div>
   );
 };

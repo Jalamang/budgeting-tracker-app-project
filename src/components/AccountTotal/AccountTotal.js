@@ -22,6 +22,28 @@ const AccountTotal = () => {
     0
   );
 
+
+  // const incomeArray = [];
+  // const expenseArray = [];
+  // transactions.filter(
+  //   (expense) => expense.amount > 0 && incomeArray.push(expense.amount)
+  // );
+  // const positiveValues = incomeArray.reduce(
+  //   (previousValue, currentValue) =>
+  //     Number(previousValue) + Number(currentValue),
+  //   0
+  // );
+
+
+  // transactions.filter(
+  //   (expense) => expense.amount < 0 && expenseArray.push(expense.amount)
+  // );
+  // const negativeValues = expenseArray.reduce(
+  //   (previousValue, currentValue) =>
+  //     Number(previousValue) + Number(currentValue),
+  //   0
+  // );
+
   return (
     <>
       <h1 className="acc-text">Total</h1>
@@ -36,10 +58,14 @@ const AccountTotal = () => {
         <style>
           {`
       .account-total{
-       color: ${total >= 0 && total <= 1000.00 ? "white" : "green"}; 
+       color: ${total >= 0 && total <= 1000.0 ? "white" : "green"}; 
       }
       .account-total{
-        border-top: ${total >= 0 && total <= 1000.00 ? "5px groove #ffff" : "5px groove #007500"}; 
+        border-top: ${
+          total >= 0 && total <= 1000.0
+            ? "5px groove #ffff"
+            : "5px groove #007500"
+        }; 
       }
 
       .account-total{

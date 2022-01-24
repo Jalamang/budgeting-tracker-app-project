@@ -33,7 +33,7 @@ const Budgets = () => {
         );
 
   let displayTransactions = "";
-  console.log(transactionsRequested);
+
   if (transactionsRequested.length === 0) {
     return <div className="budget-error">Found no transaction!</div>;
   } else {

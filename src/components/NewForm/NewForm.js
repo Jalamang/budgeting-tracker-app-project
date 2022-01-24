@@ -42,7 +42,7 @@ const NewForm = () => {
   };
 
   const handleTextChange = (event) => {
-    console.log(event.target.value);
+    
     const { value, id } = event.target;
     setTransactions({ ...transactions, [id]: value });
   };
