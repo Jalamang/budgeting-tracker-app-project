@@ -5,10 +5,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./NewForm.css";
 
 const URL = process.env.REACT_APP_API_URL;
-
 const NewForm = () => {
   let { id } = useParams();
   const [transactions, setTransactions] = useState({
+    id: "",
     date: "",
     item_name: "",
     amount: "",
@@ -42,7 +42,6 @@ const NewForm = () => {
   };
 
   const handleTextChange = (event) => {
-    
     const { value, id } = event.target;
     setTransactions({ ...transactions, [id]: value });
   };
@@ -98,7 +97,7 @@ const NewForm = () => {
           value={transactions.category}
           onChange={handleTextChange}
         >
-          <option >Choose a category</option>
+          <option>Choose a category</option>
           <option value="Income">Income</option>
           <option value="Savings">Savings</option>
           <option value="Pets">Pets</option>

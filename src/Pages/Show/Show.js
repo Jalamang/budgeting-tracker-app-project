@@ -1,6 +1,6 @@
 import React from 'react';
 import BudgetDetail from '../../components/BudgetDetail/BudgetDetail';
-import Button from '../../components/Button/Button';
+import Button from '../../components/ButtonComponent/ButtonComponent';
 import "./Show.css"
 
 const Show = () => {

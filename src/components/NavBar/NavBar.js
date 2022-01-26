@@ -11,7 +11,10 @@ const NavBar = () => {
           <h1>Budget App</h1>
         </Link>
       </div>
-       <div><AccountTotal /></div> 
+       <div>
+         <AccountTotal />
+         
+         </div> 
       
       <button className="new-transaction">
         <Link to="/transactions/new">New Transaction</Link>

@@ -22,28 +22,6 @@ const AccountTotal = () => {
     0
   );
 
-
-  // const incomeArray = [];
-  // const expenseArray = [];
-  // transactions.filter(
-  //   (expense) => expense.amount > 0 && incomeArray.push(expense.amount)
-  // );
-  // const positiveValues = incomeArray.reduce(
-  //   (previousValue, currentValue) =>
-  //     Number(previousValue) + Number(currentValue),
-  //   0
-  // );
-
-
-  // transactions.filter(
-  //   (expense) => expense.amount < 0 && expenseArray.push(expense.amount)
-  // );
-  // const negativeValues = expenseArray.reduce(
-  //   (previousValue, currentValue) =>
-  //     Number(previousValue) + Number(currentValue),
-  //   0
-  // );
-
   return (
     <>
       <h1 className="acc-text">Total</h1>

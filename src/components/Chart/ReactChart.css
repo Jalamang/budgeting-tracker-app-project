@@ -1,5 +1,6 @@
 .chart {
-  width: 40%;
-  height: 150px;
-  margin-left: 425px;
+  width: 60%;
+  height: 75.5vh;
+  margin-left: 300px;
+  background-color: rgba(1, 5, 17, 0.39);
 }

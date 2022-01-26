@@ -33,8 +33,18 @@
 
 @media (max-width: 768px) {
   .budgets {
-    display: flex;
-    width: 70vh;
+    position: relative;
+    bottom: 35px;
+    width: 100%;
     padding-left: 32px;
     padding-right: 32px;
   }}
+
+  @media (max-width: 468px) {
+    .budgets {
+      position: relative;
+      bottom: 35px;
+      width: 100%;
+      padding-left: 32px;
+      padding-right: 32px;
+    }}

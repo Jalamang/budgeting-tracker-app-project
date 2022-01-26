@@ -3,9 +3,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ReactChart.css";
 import { Bar, Line, PolarArea, Pie, Radar } from "react-chartjs-2";
+
 //A short registration format registers everything.
 import { Chart, LineElement, registerables } from "chart.js";
+// Registers the plugin to all charts:
 Chart.register(...registerables);
+
 
 const ReactChart = () => {
   const [transactions, setTransactions] = useState([]);
@@ -141,18 +144,17 @@ const ReactChart = () => {
             },
           ],
         }}
-
         options={{
           plugins: {
             title: {
               display: true,
-              text: "Budgeting App"
+              text: "Budgeting App",
             },
             legend: {
               display: true,
-              position: "top"
-           }
-          }
+              position: "top",
+            },
+          },
         }}
       />
     </div>

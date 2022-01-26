@@ -8,15 +8,23 @@ import "./Budgets.css";
 const Budgets = () => {
   const [transactions, setTransactions] = useState([]);
   const [filteredYear, setFilteredYear] = useState("All");
+  const [isLoading, setIsLoading] = useState(true);
+  const [fetchError, setFetchError] = useState(null);
   const URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchData = async () => {
-      const transactionsData = await axios.get(URL + "/transactions");
-      setTransactions(transactionsData.data);
+      try {
+        const transactionsData = await axios.get(URL + "/transactions");
+        setTransactions(transactionsData.data);
+        setFetchError(null);
+      } catch (err) {
+        setFetchError(Error("Connection to backend not established!"));
+      } finally {
+        setIsLoading(false);
+      }
     };
-
-    fetchData();
+    setTimeout(() => fetchData(), 1000);
   }, []);
 
   const handleYearChange = (selectedYear) => {
@@ -32,24 +40,30 @@ const Budgets = () => {
             new Date(budget.date).getFullYear().toString() === filteredYear
         );
 
-  let displayTransactions = "";
-
-  if (transactionsRequested.length === 0) {
-    return <div className="budget-error">Found no transaction!</div>;
-  } else {
-    displayTransactions = transactionsRequested.map((budget, index) => (
-      <Budget key={index.toString()} budget={budget} id={index} />
-    ));
-  }
+  let displayTransactions = transactionsRequested.map((budget, index) => (
+    <Budget key={index.toString()} budget={budget} id={index} />
+  ));
 
   return (
     <>
+     
+      {fetchError && <p style={{ color: "red" }}>{`${fetchError}`}</p>}
+
+      {transactionsRequested.length === 0 && !isLoading && (
+        <div className="budget-error">Found no transaction!</div>
+      )}
       <TransactionFilter
         selected={filteredYear}
         handleYearChange={handleYearChange}
-      />
-      <div className="budgets" id="style-2">
-        <div>
+      /> 
+      
+      {isLoading && (
+        <p style={{ color: "black", fontSize: "1.5rem", fontWeight: "700" }}>
+          Loading transactions...
+        </p>
+      )}
+      {!fetchError && !isLoading && (
+        <div className="budgets">
           <div className="heading">
             <div>Date</div>
             <div>Name</div>
@@ -58,7 +72,7 @@ const Budgets = () => {
           </div>
           {displayTransactions}
         </div>
-      </div>
+      )}
     </>
   );
 };

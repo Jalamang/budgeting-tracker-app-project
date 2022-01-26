@@ -38,11 +38,11 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .budget {
     display: flex;
     width: 70vh;
     padding-left: 2px;
     padding-right: 2px;
   }
-}
+} 

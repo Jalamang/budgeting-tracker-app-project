@@ -102,3 +102,10 @@
     width: 300px;
   }
 }
+
+/* Will be re-visited  */
+@media screen and (max-width: 1020px) { /* Large Desktop */ }
+@media screen and (max-width: 780px) { /* tablet */ }
+@media screen and (max-width: 480px) { /* mobile */ }
+
+

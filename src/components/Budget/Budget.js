@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Budget.css";
 
 const Budget = ({ budget, id }) => {
@@ -8,11 +10,11 @@ const Budget = ({ budget, id }) => {
     <>
     
       <div className="budget " >
-      
         <button className="date-button">{date}</button>
         <div>{item_name}</div>
         <div>{amount}</div>
-        <Link to={'/transactions/' + id}><button className="detail-view">Detail View</button></Link>
+        <Link to={'/transactions/' + id}>
+          <Button variant="secondary detail-view">Detail View</Button></Link>
         
       </div>
 

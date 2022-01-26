@@ -61,7 +61,7 @@
 
 
       /* Tablets and under */
-      @media (max-width: 768px) {
+       @media (max-width: 768px) {
         .budgetDetail {
 
           height: 600px;
@@ -69,5 +69,5 @@
           padding-left: 2px;
           padding-right: 2px;
         }
-    
-    }
+     
+    } 

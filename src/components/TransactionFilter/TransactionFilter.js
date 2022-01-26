@@ -1,6 +1,7 @@
 import "../TransactionFilter/TransactionFilter.css";
 
 const TransactionFilter = ({handleYearChange, selected }) => {
+	
 	const handleDropDown = (event) => {
 		handleYearChange(event.target.value);
 	};

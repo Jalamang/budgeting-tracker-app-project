@@ -1,9 +1,11 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import "./Button.css"
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./ButtonComponent.css"
 
-const Button = () => {
+const ButtonComponent = () => {
   const URL = process.env.REACT_APP_API_URL;
   const { id } = useParams();
   const navigate = useNavigate();
@@ -27,11 +29,12 @@ const Button = () => {
 
   return (
     <div className="button-control">
-      <button onClick={handleBack} className="back-btn">Back</button>
-      <button onClick={handleEdit} className="edit-btn">Edit</button>
-      <button onClick={handleDelete} className="delete-btn">Delete</button>
+      <Button onClick={handleBack} variant="dark back-btn">Back</Button>
+      <Button onClick={handleEdit} variant="dark back-btn edit-btn">Edit</Button>
+      <Button onClick={handleDelete} variant="dark back-btn delete-btn">Delete</Button>
     </div>
   );
 };
 
-export default Button;
+
+export default ButtonComponent;
