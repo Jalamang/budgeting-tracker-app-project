@@ -120,7 +120,6 @@ console.log(telecomsTotal)
     bankTotal,
     petTotal,
     telecomsTotal,
-    telecomsTotal,
   ];
 
   return (
