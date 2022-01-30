@@ -24,7 +24,7 @@ const AccountTotal = () => {
 
   return (
     <>
-      <h1 className="acc-text">Total</h1>
+ 
       <div className="account-total">
         <div>
           {" "}
@@ -33,7 +33,7 @@ const AccountTotal = () => {
             .toString()
             .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
         </div>
-        <style>
+        <style> 
           {`
       .account-total{
        color: ${total >= 0 && total <= 1000.0 ? "white" : "green"}; 

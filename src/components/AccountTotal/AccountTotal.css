@@ -1,22 +1,21 @@
 .account-total {
   background-color: rgba(8, 10, 9, 0);
   position: relative;
-  top: 27px;
+  top: 15px;
   border: 2px solid black;
   margin-left: 100px;
   margin-right: 230px;
   justify-content: center;
-  height: 45px;
-  align-items: center;
+  height: 55px;
+  width: 20rem;
   padding-top: 2px;
   border-top: 2px groove #ff0000;
   font-size: x-large;
   font-weight: 900;
-  display: flex;
-  justify-content: space-evenly;
+
 }
 
-.acc-text {
+/* .acc-text {
   text-align: left;
   padding-left: 0;
   margin: 0;
@@ -26,10 +25,10 @@
   position: relative;
   top: 75px;
   color: antiquewhite;
-}
+} */
 
 /* Tablets and under */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .account-total {
     width: 145px;
     height: 50px;
@@ -38,12 +37,12 @@
     padding: 0;
     position: relative;
     top: -122px;
-  }
+  } */
 
-  .acc-text {
+  /* .acc-text {
     margin-left: 0;
     margin-right: 10px;
     position: relative;
     top: 98px;
-  }
-}
+  } */
+/* } */

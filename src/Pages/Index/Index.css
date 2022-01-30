@@ -9,7 +9,7 @@
 @media (max-width: 768px) {
   .index {
     display: grid;
-    width: 74.6vh;
+    padding-top: 35;
     padding-left: 2px;
     padding-right: 2px;
   }

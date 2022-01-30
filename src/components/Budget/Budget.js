@@ -7,7 +7,7 @@ import "./Budget.css";
 const Budget = ({ budget, id }) => {
   const { date, item_name, amount } = budget;
   return (
-    <>
+    <div>
     
       <div className="budget " >
         <button className="date-button">{date}</button>
@@ -18,7 +18,7 @@ const Budget = ({ budget, id }) => {
         
       </div>
 
-    </>
+    </div>
   )
 };
 

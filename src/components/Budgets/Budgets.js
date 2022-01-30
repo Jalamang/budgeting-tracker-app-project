@@ -46,7 +46,6 @@ const Budgets = () => {
 
   return (
     <>
-     
       {fetchError && <p style={{ color: "red" }}>{`${fetchError}`}</p>}
 
       {transactionsRequested.length === 0 && !isLoading && (
@@ -55,8 +54,8 @@ const Budgets = () => {
       <TransactionFilter
         selected={filteredYear}
         handleYearChange={handleYearChange}
-      /> 
-      
+      />
+
       {isLoading && (
         <p style={{ color: "black", fontSize: "1.5rem", fontWeight: "700" }}>
           Loading transactions...
@@ -65,10 +64,10 @@ const Budgets = () => {
       {!fetchError && !isLoading && (
         <div className="budgets">
           <div className="heading">
-            <div>Date</div>
-            <div>Name</div>
-            <div>Amount</div>
-            <div>Detail</div>
+              <div>Date</div>
+              <div>Name</div>
+              <div>Amount</div>
+              <div>Detail</div>
           </div>
           {displayTransactions}
         </div>

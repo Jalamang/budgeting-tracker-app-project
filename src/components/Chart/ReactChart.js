@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ReactChart.css";
-import { Bar, Line, PolarArea, Pie, Radar } from "react-chartjs-2";
+//components 
+import { Bar, Line, PolarArea, Pie, Radar, Doughnut } from "react-chartjs-2";
 
 //A short registration format registers everything.
 import { Chart, LineElement, registerables } from "chart.js";
@@ -28,9 +29,11 @@ const ReactChart = () => {
       expense.category[0].toUpperCase() + expense.category.slice(1)
     )
   );
+
   //labels:
   const data = [...new Set(expenseArray)];
 
+  console.log(data)
   const IncomeArray = [];
   transactions.map((cat) => {
     if (cat.category.toLowerCase() === "income") {
@@ -108,7 +111,7 @@ const ReactChart = () => {
       Number(previousValue) + Number(currentValue),
     0
   );
-
+console.log(telecomsTotal)
   //amounts for each category
   const categoryTotal = [
     incomeTotal,
@@ -117,16 +120,17 @@ const ReactChart = () => {
     bankTotal,
     petTotal,
     telecomsTotal,
+    telecomsTotal,
   ];
 
   return (
     <div className="chart">
-      <PolarArea
+      <Doughnut
         data={{
           labels: data,
           datasets: [
             {
-              label: "Budget App",
+              // label: "Budget App",
               data: categoryTotal,
               //backgroundColor:'green',
               backgroundColor: [
@@ -135,6 +139,7 @@ const ReactChart = () => {
                 "rgba(255, 206, 86, 0.6)",
                 "rgba(75, 192, 192, 0.6)",
                 "rgba(153, 102, 255, 0.6)",
+                "rgba(255, 159, 64, 0.6)",
                 "rgba(255, 159, 64, 0.6)",
               ],
               borderWidth: 1,
@@ -147,12 +152,12 @@ const ReactChart = () => {
         options={{
           plugins: {
             title: {
-              display: true,
+              display: false,
               text: "Budgeting App",
             },
             legend: {
               display: true,
-              position: "top",
+              position: "right",
             },
           },
         }}
