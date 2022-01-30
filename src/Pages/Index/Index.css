@@ -8,9 +8,10 @@
 
 @media (max-width: 768px) {
   .index {
-    display: grid;
+    width: auto;
+    /* display: grid;
     padding-top: 35;
     padding-left: 2px;
-    padding-right: 2px;
+    padding-right: 2px; */
   }
 }

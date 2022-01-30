@@ -17,15 +17,15 @@ const NavBar = () => {
           <h1>Budget App</h1>
          </Link>
     </Navbar.Brand><AccountTotal />
-    <Navbar.Toggle />
-    <Navbar.Collapse className="justify-content-end">
+    
+   
       <Navbar.Text>
          <button className="new-transaction">
          <Link to="/transactions/new">New Transaction</Link>
        </button>
        
       </Navbar.Text>
-    </Navbar.Collapse>
+   
   </Container>
 </Navbar>
 
