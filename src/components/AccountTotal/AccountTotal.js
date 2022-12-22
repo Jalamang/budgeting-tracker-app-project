@@ -16,22 +16,23 @@ const AccountTotal = () => {
   }, []);
 
   const totalAmounts = transactions.map((amount) => amount.amount);
-  let total = totalAmounts.reduce(
+
+   const total = totalAmounts.reduce(
     (previousValue, currentValue) =>
       Number(previousValue) + Number(currentValue),
     0
   );
 
+  // https://fastspring.com/blog/how-to-format-30-currencies-from-countries-all-over-the-world/
+  const f = new Intl.NumberFormat("en-us", {currency: "USD", style: "currency"});
+  const fm = new Intl.NumberFormat("en-us", {notation: "compact"});
+// console.log(f.format(total));
   return (
     <>
- 
       <div className="account-total">
         <div>
-          {" "}
-          {total
-            .toFixed(2)
-            .toString()
-            .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
+          {total > 999999.99 
+          ? fm.format(total) : f.format(total) }
         </div>
         <style> 
           {`

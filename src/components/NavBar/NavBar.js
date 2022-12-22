@@ -28,22 +28,6 @@ const NavBar = () => {
    
   </Container>
 </Navbar>
-
-    // <div className="navbar">
-    //   <div className="budgetTitle">
-    //     <Link to="/transactions">
-    //       <h1>Budget App</h1>
-    //     </Link>
-    //   </div>
-    //    <div>
-    //      <AccountTotal />
-         
-    //      </div> 
-      
-    //   <button className="new-transaction">
-    //     <Link to="/transactions/new">New Transaction</Link>
-    //   </button>
-    // </div>
   );
 };
 

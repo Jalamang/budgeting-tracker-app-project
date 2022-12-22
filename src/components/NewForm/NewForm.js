@@ -7,23 +7,18 @@ import "./NewForm.css";
 const URL = process.env.REACT_APP_API_URL;
 const NewForm = () => {
   let { id } = useParams();
-  const [transactions, setTransactions] = useState({
-    id: "",
-    date: "",
-    item_name: "",
-    amount: "",
-    from: "",
-    category: "",
-  });
+  const [transactions, setTransactions] = useState({});
 
   const navigate = useNavigate();
 
   useEffect(() => {
+    if(id){
     const fetchData = async () => {
       const transactionsData = await axios(URL + "/transactions/" + id);
       setTransactions(transactionsData.data);
     };
     fetchData();
+  }
   }, []);
 
   const handleSubmit = (event) => {

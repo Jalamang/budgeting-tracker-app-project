@@ -29,7 +29,7 @@ const ReactChart = () => {
       expense.category[0].toUpperCase() + expense.category.slice(1)
     )
   );
-
+console.log(transactions);
   //labels:
   const data = [...new Set(expenseArray)];
 
@@ -46,7 +46,7 @@ const ReactChart = () => {
       Number(previousValue) + Number(currentValue),
     0
   );
-
+console.log(incomeTotal + " income");
   const foodArray = [];
   transactions.map((cat) => {
     if (cat.category.toLowerCase() === "food") {
@@ -59,7 +59,7 @@ const ReactChart = () => {
       Number(previousValue) + Number(currentValue),
     0
   );
-
+console.log(foodTotal +" food");
   const savingsArray = [];
   transactions.map((cat) => {
     if (cat.category.toLowerCase() === "savings") {
@@ -72,7 +72,7 @@ const ReactChart = () => {
       Number(previousValue) + Number(currentValue),
     0
   );
-
+console.log(savingsTotal +" savings");
   const bankArray = [];
   transactions.map((cat) => {
     if (cat.category.toLowerCase() === "bank") {
@@ -85,7 +85,7 @@ const ReactChart = () => {
       Number(previousValue) + Number(currentValue),
     0
   );
-
+  console.log(bankTotal  + " bank total")
   const petArray = [];
   transactions.map((cat) => {
     if (cat.category.toLowerCase() === "pet") {
@@ -98,7 +98,7 @@ const ReactChart = () => {
       Number(previousValue) + Number(currentValue),
     0
   );
-
+  console.log(petTotal + " pet Total")
   const telecomsArray = [];
   transactions.map((cat) => {
     if (cat.category.toLowerCase() === "telecoms") {
@@ -111,20 +111,23 @@ const ReactChart = () => {
       Number(previousValue) + Number(currentValue),
     0
   );
-console.log(telecomsTotal)
+console.log(telecomsTotal + " telecoms")
   //amounts for each category
   const categoryTotal = [
-    incomeTotal,
-    foodTotal,
     savingsTotal,
+    incomeTotal,
     bankTotal,
     petTotal,
     telecomsTotal,
+    foodTotal,
   ];
+
+
+
 
   return (
     <div className="chart">
-      <Doughnut
+      <PolarArea
         data={{
           labels: data,
           datasets: [
@@ -148,7 +151,10 @@ console.log(telecomsTotal)
             },
           ],
         }}
-        options={{
+        options={
+          
+          {
+            // responsive: true,
           plugins: {
             title: {
               display: false,

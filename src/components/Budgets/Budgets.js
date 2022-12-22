@@ -39,7 +39,7 @@ const Budgets = () => {
           (budget) =>
             new Date(budget.date).getFullYear().toString() === filteredYear
         );
-
+console.log(transactionsRequested)
   let displayTransactions = transactionsRequested.map((budget, index) => (
     <Budget key={index.toString()} budget={budget} id={index} />
   ));
