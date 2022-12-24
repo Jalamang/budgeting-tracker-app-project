@@ -34,6 +34,7 @@ const NewForm = () => {
 
         .then(() => navigate(`/transactions`));
     }
+    window.location.reload();
   };
 
   const handleTextChange = (event) => {

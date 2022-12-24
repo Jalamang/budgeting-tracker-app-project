@@ -5,6 +5,7 @@ import "./AccountTotal.css";
 
 const AccountTotal = () => {
   const [transactions, setTransactions] = useState([]);
+  const [totalAmount, setTotalAmount] = useState(0);
   const URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
@@ -15,13 +16,18 @@ const AccountTotal = () => {
     fetchData();
   }, []);
 
+  
   const totalAmounts = transactions.map((amount) => amount.amount);
 
-   const total = totalAmounts.reduce(
-    (previousValue, currentValue) =>
-      Number(previousValue) + Number(currentValue),
-    0
-  );
+   
+
+  useEffect(() => {
+    setTotalAmount(totalAmounts.reduce(
+      (previousValue, currentValue) =>
+        Number(previousValue) + Number(currentValue),
+      0
+    ))
+  })
 
   // https://fastspring.com/blog/how-to-format-30-currencies-from-countries-all-over-the-world/
   const f = new Intl.NumberFormat("en-us", {currency: "USD", style: "currency"});
@@ -31,27 +37,27 @@ const AccountTotal = () => {
     <>
       <div className="account-total">
         <div>
-          {total > 999999.99 
-          ? fm.format(total) : f.format(total) }
+          {totalAmount > 999999.99 
+          ? fm.format(totalAmount) : f.format(totalAmount) }
         </div>
         <style> 
           {`
       .account-total{
-       color: ${total >= 0 && total <= 1000.0 ? "white" : "green"}; 
+       color: ${totalAmount >= 0 && totalAmount <= 1000.0 ? "white" : "green"}; 
       }
       .account-total{
         border-top: ${
-          total >= 0 && total <= 1000.0
+          totalAmount >= 0 && totalAmount <= 1000.0
             ? "5px groove #ffff"
             : "5px groove #007500"
         }; 
       }
 
       .account-total{
-        color: ${total < 0 ? "red" : ""}  
+        color: ${totalAmount < 0 ? "red" : ""}  
        }
       .account-total{
-        border-top:  ${total < 0 ? "5px groove #ff0000" : ""}
+        border-top:  ${totalAmount < 0 ? "5px groove #ff0000" : ""}
           
        }
 `}

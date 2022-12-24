@@ -15,11 +15,13 @@ const ButtonComponent = () => {
 
   const handleEdit = () => {
     navigate("/transactions/" + id + "/edit");
+    
   };
 
   const handleDelete = () => {
     const deletePost = async () => {
       await axios.delete(URL + "/transactions/" + id);
+     
     };
     deletePost();
     navigate("/transactions");
